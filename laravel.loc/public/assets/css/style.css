@@ -449,7 +449,7 @@ ul.dc_paginationA03 li a:hover, ul.dc_paginationA03 li a.current {
 }
 /*----about-----*/
 .about {
-	border: 1px ridge;
+	//border: 1px ridge;
 }
 .about h2{
 	font-family: 'Carrois Gothic SC', sans-serif;
@@ -836,6 +836,13 @@ form textarea{
 	color: #264284;
 	text-align: left;
 	padding: 10px 0px;
+}
+
+.paginate{
+	margin: 20px auto;
+}
+.paginate .pagination {
+    justify-content: center;
 }
 
 /*---End-wrap*/

@@ -9,6 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<!-- <link href="{{ 'assets/css/style.css' }}" rel="stylesheet" type="text/css"  media="all" /> -->
+		<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"  media="all" />
 		<link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css"  media="all" />
 		<title>Problog Website Template | Home :: W3layouts</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,7 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="wrap">
 				<!-- Start-logo-->
 				<div class="logo">
-					<a href="index.html"><img src=" {{asset('assets/images/logo.png')}}" title="logo" /></a>
+					<a href="{{route('home')}}"><img src=" {{asset('assets/images/logo.png')}}" title="logo" /></a>
 				</div>				
 				<!-- End-Logo-->
 				<!-- Start-Header-nav-->				
@@ -31,12 +32,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="header-nav1">
 				<div class="wrap">
-					<ul>
-						<li class="current"><a href="index.html">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">Advertise</a></li>
-						<li><a href="contact.html">Contact</a></li>
+					<ul class="wrap-ul">
+						<li class="current"><a href="{{route('home')}}">Home</a></li>
+						<li><a href="{{route('about')}}">About</a></li>
+						<li><a href="{{route('contact')}}">Contact</a></li>
 					</ul>				
 				<div class="search-bar">
 					<form action="{{ route('search') }}" method="get">
@@ -65,9 +64,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="clear"> </div>
 			<!-- End-content-gallery-->
 			<!-- DC Pagination:C9 Start -->
-			<div class="wrap">
+			<div class="wrap paginate">
 	<!-- DC Pagination:A3 Start -->
-						<ul class="dc_pagination dc_paginationA dc_paginationA03">
+						
+						<!--<ul class="dc_pagination dc_paginationA dc_paginationA03">
 						  <li><a href="#" class="first">First</a></li>
 						  <li><a href="#" class="previous">Previous</a></li>
 						  <li><a href="#">1</a></li>
@@ -77,7 +77,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						  <li><a href="#">5</a></li>
 						  <li><a href="#" class="next">Next</a></li>
 						  <li><a href="#" class="last">Last</a></li>
-						</ul>
+						</ul>-->
 							<!-- DC Pagination:A3 End -->
 	    		<div class="clear"> </div>
 	<!-- DC Pagination:C9 End -->
@@ -109,7 +109,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<p class="link"><span>© 2013 pro_blog. All rights Reserved | Designed by&nbsp; <a href="http://w3layouts.com/"> W3Layouts</a>	</span></p>
 </div>
 		<!-- End-wrap -->
-		
+<script type="text/javascript" src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>	
+<script type="text/javascript" src="{{ asset('assets/js/scripts.js') }}"></script>		
 	</body>
 </html>
 

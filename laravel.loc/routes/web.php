@@ -28,4 +28,22 @@ Route::group(['middleware'=>'web'], function(){
 	Route::get('/single/{id}', 'MainController@single')->name('single');
 	Route::get('/category/{cat}', 'MainController@category')->name('category');
 	Route::get('/search', 'MainController@search')->name('search');
+	Route::get('/archive/{arch}', 'MainController@archive')->name('archive');
+
+	Route::get('/about', 'AboutController@index')->name('about');
+	Route::match(['get','post'] ,'/contact', 'ContactController@index')->name('contact');
+
+	//Route::auth();
 });
+/*
+Route::group( ['prefix' => 'admin'], ['middleware'=>'auth'], function(){
+
+	//admin
+	Route::get('/', function(){
+
+	});
+
+});
+
+Route::auth();
+Route::get('/home', 'MainController@index');*/

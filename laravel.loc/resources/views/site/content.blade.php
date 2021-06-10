@@ -12,13 +12,18 @@
 				<ul>
 					<li><a href="#">Lorem ipsum</a></li>
 					<li><a href="#">: {{ $article->created_at }}</a></li>
-					<li><a href="/single/{{$article->id}}"><span>Read more</span></a></li>
+					<li><a href="/single/{{$article->id}}"><span>Read more</span></a>
+					</li>
 				</ul>
 			</div>
 			<div class="clear"> </div>
 		</div>
 		@endforeach
+		<div class="clear"> </div>
 	@else
 		<p>Записей нет...</p>
 	@endif
+	<div class="wrap paginate">
+		{{ $articles->links() }}
+	</div>
 
